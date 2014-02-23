@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "name": "Open Web App",
+  "description": "Your new awesome Open Web App",
+  "launch_path": "/dist/index.html",
+  "icons": {
+    "16": "/dist/app-icons/icon-16.png",
+    "48": "/dist/app-icons/icon-48.png",
+    "128": "/dist/app-icons/icon-128.png"
+  },
+  "developer": {
+    "name": "David Chanin",
+    "email": "chanindav@gmail.com"
+  },
+  "default_locale": "en"
+}
