@@ -57,10 +57,48 @@ html, body
 	text-align right
 
 	.expression
+	.error
 		position absolute
 		top 50%
 		right 5px
 		margin-top -1.25rem
+		opacity 1
+		transition all 300ms
+
+	.error
+		opacity 0
+
+	&.has-error
+		.error
+			opacity 1
+		.expression
+			opacity 0
+
+
+	.clear-container
+		border-right 1px solid black_color
+		display table
+		height 100%
+		opacity 0
+		position absolute
+		top 0
+		left 0px
+		transition all 100ms
+		z-index 99
+
+		.has-expression&
+			opacity 1
+
+	.clear
+		background warm_grey_color
+		border none
+		border-radius 0
+		color orange_color
+		cursor pointer
+		display table-cell
+		padding 0 15px
+		vertical-align middle
+		-moz-user-select none
 
 	.cursor
 		-moz-animation-name blinker

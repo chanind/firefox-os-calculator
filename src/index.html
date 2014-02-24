@@ -10,9 +10,13 @@
 	</head>
 	<body ng-controller="CalculatorCtrl">
 
-		<div class="screen">
+		<div class="screen" ng-class="{ 'has-expression' : expression, 'has-error' : error, screen: true }">
+			<div class="clear-container">
+				<div ng-click="clear()" class="clear">clear</div>
+			</div>
+			<div class="error">error</div>
 			<div class="expression">
-				{{ expression }}
+				{{ expression }}<span class="cursor">|</span>
 			</div>
 		</div>
 		<div class="buttons">
@@ -26,7 +30,7 @@
 				<button ng-click="insertChar('4')">4</button>
 				<button ng-click="insertChar('5')">5</button>
 				<button ng-click="insertChar('6')">6</button>
-				<button ng-click="insertChar('*')">&times;</button>
+				<button ng-click="insertChar('×')">&times;</button>
 			</div>
 			<div class="row">
 				<button ng-click="insertChar('7')">7</button>
@@ -43,6 +47,7 @@
 		</div>
 
 		<script src="vendor/angular.min.js"></script>
+		<script src="vendor/math.min.js"></script>
 		<script src="scripts/calculator.js"></script>
 		
 	</body>
