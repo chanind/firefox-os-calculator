@@ -47,10 +47,34 @@ html, body
 	height 100%
 
 .screen
+	-moz-box-sizing border-box
 	background warm_grey_color
+	color orange_color
+	font-size 2.5rem
 	width 100%
 	height 10%
+	position relative
+	text-align right
 
+	.expression
+		position absolute
+		top 50%
+		right 5px
+		margin-top -1.25rem
+
+	.cursor
+		-moz-animation-name blinker
+		-moz-animation-duration 1s
+		-moz-animation-timing-function linear
+		-moz-animation-iteration-count infinite
+
+
+@-moz-keyframes blinker
+	0% { opacity 1.0 }
+	10% { opacity 0.0 }
+	50% { opacity 0.0 }
+	60% { opacity 1.0 }
+	100% { opacity 1.0 }
 
 .buttons
 	height 90%

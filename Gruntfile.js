@@ -19,6 +19,10 @@ module.exports = function(grunt) {
         src: '**',
         dest: 'dist/',
         expand: true
+      },
+      angular: {
+        src: 'bower_components/angular/angular.min.js',
+        dest: 'dist/vendor/angular.min.js'
       }
     },
 
@@ -41,5 +45,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-stylus');
 
-  grunt.registerTask('default', ['clean:pre', 'copy:main', 'coffee:main', 'stylus:main', 'clean:post']);
+  grunt.registerTask('default', ['clean:pre', 'copy:main', 'copy:angular', 'coffee:main', 'stylus:main', 'clean:post']);
 };

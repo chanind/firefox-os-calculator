@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" ng-app="Calculator">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
@@ -8,38 +8,42 @@
 		<link href="styles/util.css" rel="stylesheet" type="text/css">
 		<link href="styles/app.css" rel="stylesheet" type="text/css">
 	</head>
-	<body>
+	<body ng-controller="CalculatorCtrl">
 
 		<div class="screen">
+			<div class="expression">
+				{{ expression }}
+			</div>
 		</div>
 		<div class="buttons">
 			<div class="row">
-				<button>7</button>
-				<button>8</button>
-				<button>9</button>
-				<button>&divide;</button>
+				<button ng-click="insertChar('1')">1</button>
+				<button ng-click="insertChar('2')">2</button>
+				<button ng-click="insertChar('3')">3</button>
+				<button ng-click="insertChar('/')">&divide;</button>
 			</div>
 			<div class="row">
-				<button>4</button>
-				<button>5</button>
-				<button>6</button>
-				<button>&times;</button>
+				<button ng-click="insertChar('4')">4</button>
+				<button ng-click="insertChar('5')">5</button>
+				<button ng-click="insertChar('6')">6</button>
+				<button ng-click="insertChar('*')">&times;</button>
 			</div>
 			<div class="row">
-				<button>7</button>
-				<button>8</button>
-				<button>9</button>
-				<button>+</button>
+				<button ng-click="insertChar('7')">7</button>
+				<button ng-click="insertChar('8')">8</button>
+				<button ng-click="insertChar('9')">9</button>
+				<button ng-click="insertChar('+')">+</button>
 			</div>
 			<div class="row">
-				<button>.</button>
-				<button>0</button>
-				<button class="equals">=</button>
-				<button>-</button>
+				<button ng-click="insertChar('.')">.</button>
+				<button ng-click="insertChar('0')">0</button>
+				<button ng-click="evaluate()" class="equals">=</button>
+				<button ng-click="insertChar('-')">-</button>
 			</div>
 		</div>
 
-		<script src="scripts/app.js"></script>
+		<script src="vendor/angular.min.js"></script>
+		<script src="scripts/calculator.js"></script>
 		
 	</body>
 </html>
