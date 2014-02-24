@@ -1,18 +1,95 @@
-body
-	background #333
+// colors
+
+blue_color = #00AACC
+orange_color = #FF4E00
+brick_color = #CD6723
+red_color = #B90000
+green_color = #5F9B0A
+black_color = #000000
+warm_grey_color = #333333
+grey_color = #2C393B
+light_grey_color = #F4F4F4
+ivory_color = #EAEAE7
+
+// fonts
+
+* 
+	font-family 'FiraSans'
+
+@font-face
+	font-family 'FiraSans'
+	src url('../fonts/FiraSans-Regular.woff') format('woff')
+	font-weight normal
+	font-style normal
+
+@font-face
+	font-family 'FiraSans'
+	src url('../fonts/FiraSans-Light.woff') format('woff')
+	font-weight 300
+	font-style normal
+
+@font-face
+	font-family 'FiraSans'
+	src url('../fonts/FiraSans-Medium.woff') format('woff')
+	font-weight 500
+	font-style normal
+
+@font-face
+	font-family 'FiraSans'
+	src url('../fonts/FiraSans-Bold.woff') format('woff')
+	font-weight bold
+	font-style normal
+
+
+html, body
+	background black_color
 	color white
+	height 100%
 
 .screen
+	background warm_grey_color
 	width 100%
 	height 10%
 
 
 .buttons
+	height 90%
+
+	.row
+		border none
+		float left
+		width 100%
+		height 25%
+
+		&:last-child
+			button
+				border-bottom-style solid
 
 	button
+		-moz-box-sizing border-box
 		box-sizing border-box
+		background warm_grey_color
+		border-color black_color
+		border-width 1px
+		border-style solid none none solid
+		border-radius 0
+		color light_grey_color
+		display block
+		font-size 2.5rem
+		font-weight normal
 		float left
-		height 22.5%
+		padding 0
+		height 100%
 		width 25%
+		transition all 130ms
 
+		&:last-child
+			background grey_color
+			border-right-style solid
+
+		&.equals
+			background grey_color
+
+	button:active
+		background orange_color
 
