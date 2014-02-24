@@ -37,13 +37,33 @@ module.exports = function(grunt) {
     clean: {
       pre: ['dist'],
       post: ['dist/scripts/**.coffee', 'dist/styles/**.styl']
+    },
+
+    compress: {
+      release: {
+        options: {
+          archive: 'calculator.zip',
+          mode: 'zip'
+        },
+        files: [
+          {
+            src: 'dist/**'
+          }
+        ]
+      }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.registerTask('default', ['clean:pre', 'copy:main', 'copy:angular', 'coffee:main', 'stylus:main', 'clean:post']);
+  grunt.registerTask('release', function() {
+    grunt.task.run('default');
+    grunt.task.run('compress:release');
+  });
 };
