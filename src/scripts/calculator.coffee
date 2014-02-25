@@ -10,8 +10,9 @@ Calculator.controller 'CalculatorCtrl', ($scope) ->
 	$scope.insertChar = (char) -> $scope.expression += char
 	$scope.clear = -> $scope.expression = ''
 	$scope.evaluate = ->
+		return unless $scope.expression
 		try
-			$scope.expression = math.eval($scope.expression.replace('×', '*'))
+			$scope.expression = math.eval($scope.expression.replace('×', '*')).toString()
 		catch exception
 			$scope.error = true
 			clearTimeout(errorTimeout)
