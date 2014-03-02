@@ -12,5 +12,79 @@
     "name": "David Chanin",
     "email": "chanindav@gmail.com"
   },
-  "default_locale": "en"
+  "default_locale": "en",
+  "locales": {
+    "en": {
+      "name": "Calculator",
+      "description": "A Simple Calculator"
+    },
+    "fr": {
+      "name": "Calculatrice",
+      "description": "Une Calculatrice Facile"
+    },
+    "es": {
+      "name": "Calculadora",
+      "description": "Calculadora"
+    },
+    "pr_BR": {
+      "name": "Calculadora",
+      "description": "Calculadora"
+    },
+    "de": {
+      "name": "Rechner",
+      "description": "Rechner"
+    },
+    "ru": {
+      "name": "КАЛЬКУЛЯТОР",
+      "description": "КАЛЬКУЛЯТОР"
+    },
+    "zh": {
+      "name": "计算器",
+      "description": "计算器"
+    },
+    "ja": {
+      "name": "電卓",
+      "description": "電卓"
+    },
+    "hi": {
+      "name": "कैलकुलेटर",
+      "description": "कैलकुलेटर"
+    },
+    "ar": {
+      "name": "لحاسبة",
+      "description": "لحاسبة"
+    },
+    "ta": {
+      "name": "اகால்குலேட்டர்",
+      "description": "اகால்குலேட்டர்"
+    },
+    "cs": {
+      "name": "kalkulačka",
+      "description": "kalkulačka"
+    },
+    "ro": {
+      "name": "Calculator",
+      "description": "Calculator"
+    },
+    "hu": {
+      "name": "Számológép",
+      "description": "Számológép"
+    },
+    "sw": {
+      "name": "Kikokotoo",
+      "description": "Kikokotoo"
+    },
+    "sk: {
+      "name": "Kalkulačka",
+      "description": "Kalkulačka"
+    },
+    "it_IT": {
+      "name": "Calcolatrice",
+      "description": "Calcolatrice"
+    },
+    "id": {
+      "name": "Calculator",
+      "description": "Calculator"
+    }
+  }
 }

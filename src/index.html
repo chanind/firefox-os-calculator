@@ -3,16 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<title>FirefoxOS Calculator</title>
+		<title data-l10n-id="calculator">Calculator</title>
 		<link href="styles/normalize.css" rel="stylesheet" type="text/css">
 		<link href="styles/util.css" rel="stylesheet" type="text/css">
 		<link href="styles/app.css" rel="stylesheet" type="text/css">
+		<link rel="resource" type="application/l10n" href="locales/locales.ini" />
 	</head>
 	<body ng-controller="CalculatorCtrl">
 
 		<div class="screen" ng-class="{ 'has-expression' : expression, 'has-error' : error, screen: true }">
 			<div class="clear-container">
-				<div ng-click="clear()" class="clear">clear</div>
+				<div ng-click="clear()" class="clear" data-l10n-id="clear">clear</div>
 			</div>
 			<div class="error">error</div>
 			<div class="expression">
@@ -46,6 +47,7 @@
 			</div>
 		</div>
 
+		<script type="application/javascript" src="scripts/l10n.js"></script>
 		<script src="vendor/angular.min.js"></script>
 		<script src="vendor/math.min.js"></script>
 		<script src="scripts/calculator.js"></script>
