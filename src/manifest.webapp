@@ -4,9 +4,8 @@
   "description": "A Simple Calculator",
   "launch_path": "/index.html",
   "icons": {
-    "16": "/app-icons/icon-16.png",
-    "48": "/app-icons/icon-48.png",
-    "128": "/app-icons/icon-128.png"
+    "60": "/images/logo-60.png",
+    "128": "/images/logo-128.png"
   },
   "developer": {
     "name": "David Chanin",
@@ -74,7 +73,7 @@
       "name": "Kikokotoo",
       "description": "Kikokotoo"
     },
-    "sk: {
+    "sk": {
       "name": "Kalkulačka",
       "description": "Kalkulačka"
     },
